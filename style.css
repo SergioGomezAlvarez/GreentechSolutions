@@ -17,13 +17,14 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 
 * {
     font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Header Style */
 .main-header {
     background: #ffffff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    position: sticky;
     top: 0;
     z-index: 99;
 }
@@ -35,6 +36,12 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
     align-items: center;
     justify-content: space-between;
     padding: 14px 32px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo-text {
@@ -51,10 +58,12 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
     font-weight: 700;
 }
 
-.icon-leaf {
-    font-size: 1.3rem;
-    color: #0fb14a;
+.custom-logo {
+    max-height: 80px;
+    width: auto;
+    height: auto;
 }
+
 
 /* ===== MENU ===== */
 .site-nav .nav-menu {

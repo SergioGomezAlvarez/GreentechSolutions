@@ -17,10 +17,9 @@
         <?php if (has_custom_logo()): ?>
           <?php the_custom_logo(); ?>
         <?php else: ?>
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="logo-text">
-            <span class="icon-leaf">🍃</span> GreenTech <span class="bold">Solutions</span>
-          </a>
+
         <?php endif; ?>
+        <h1 class="logo-text">Greentech Solutions</h1>
       </div>
 
       <!-- Menu -->

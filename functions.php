@@ -22,4 +22,16 @@ function greentech_enqueue_styles()
     wp_enqueue_style('greentech-style', get_stylesheet_uri());
 }
 add_action('wp_enqueue_scripts', 'greentech_enqueue_styles');
+
+function mytheme_setup()
+{
+    add_theme_support('custom-logo', array(
+        'height' => 100,
+        'width' => 300,
+        'flex-height' => true,
+        'flex-width' => true,
+    ));
+}
+add_action('after_setup_theme', 'mytheme_setup');
+
 ?>
