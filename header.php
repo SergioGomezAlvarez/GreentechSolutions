@@ -34,11 +34,5 @@
         ));
         ?>
       </nav>
-
-      <!-- Search -->
-      <div class="nav-search">
-        <?php get_search_form(); ?>
-      </div>
-
     </div>
   </header>

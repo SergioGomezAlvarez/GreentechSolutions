@@ -8,7 +8,7 @@
  * 
  * @package GreentechSolutions
  */
-
+/* Register Navigation Menus */
 function greentech_register_menus()
 {
     register_nav_menus(array(
