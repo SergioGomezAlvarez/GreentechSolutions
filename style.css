@@ -274,3 +274,7 @@ a {
   font-size: 0.9rem;
   color: #999;
 }
+
+.green-text{
+  color: green;
+}
