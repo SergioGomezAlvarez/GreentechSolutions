@@ -1,37 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
 <head>
-  <meta charset="<?php bloginfo('charset'); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php wp_head(); ?>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><?php bloginfo('name'); ?></title>
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+    <div id="wrapper">
 
-  <header class="main-header">
-    <div class="nav-container">
+        <!-- Header -->
+        <header id="header">
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>"
+                    class="logo" />
+            </a>
 
-      <!-- Logo -->
-      <div class="logo-area">
-        <?php if (has_custom_logo()): ?>
-          <?php the_custom_logo(); ?>
-        <?php else: ?>
+            <nav class="links">
+                <?php
+                wp_nav_menu([
+                    'theme_location' => 'header-menu',
+                    'container' => false,
+                    'items_wrap' => '<ul>%3$s</ul>'
+                ]);
+                ?>
+            </nav>
 
-        <?php endif; ?>
-        <h1 class="logo-text">Greentech Solutions</h1>
-      </div>
-
-      <!-- Menu -->
-      <nav class="site-nav">
-        <?php
-        wp_nav_menu(array(
-          'theme_location' => 'primary',
-          'container' => false,
-          'menu_class' => 'nav-menu',
-          'fallback_cb' => false
-        ));
-        ?>
-      </nav>
-    </div>
-  </header>
+            <nav class="main">
+                <ul>
+                    <li class="search">
+                        <a class="fa-search" href="#search">Search</a>
+                        <?php get_search_form(); ?>
+                    </li>
+                    <li class="menu"><a class="fa-bars" href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
