@@ -21,3 +21,6 @@ function greentech_register_menus()
     register_nav_menu('header-menu', __('Header Menu', 'greentech'));
 }
 add_action('init', 'greentech_register_menus');
+
+// functions.php
+add_theme_support('post-thumbnails');
