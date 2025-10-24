@@ -13,9 +13,6 @@
 
         <!-- Header -->
         <header id="header">
-            <a href="<?php echo esc_url(home_url('/')); ?>">
-                <h3 class="green-text"><strong>GreenTech Solutions</strong></h1>
-            </a>
 
             <nav class="links">
                 <?php

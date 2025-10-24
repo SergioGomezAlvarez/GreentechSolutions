@@ -1,4 +1,9 @@
 <section id="sidebar">
+    <a href="<?php echo esc_url(home_url('/')); ?>">
+        <h3 class="logo-text"><strong>GREENTECH</strong></h3>
+        <h3 class="logo-text"><strong>SOLUTIONS</strong></h3>
+    </a>
+    
     <h2 class="widget-title">Recent Posts</h2>
     <ul class="mini-posts">
         <?php
