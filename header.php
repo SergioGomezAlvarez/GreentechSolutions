@@ -23,14 +23,9 @@
                 ]);
                 ?>
             </nav>
+            <a class="search"></a>
+
 
             <nav class="main">
-                <ul>
-                    <li class="search">
-                        <a class="fa-search" href="#search">Search</a>
-                        <?php get_search_form(); ?>
-                    </li>
-                    <li class="menu"><a class="fa-bars" href="#menu">Menu</a></li>
-                </ul>
             </nav>
         </header>

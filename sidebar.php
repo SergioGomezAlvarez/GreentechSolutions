@@ -3,7 +3,8 @@
         <h3 class="logo-text"><strong>GREENTECH</strong></h3>
         <h3 class="logo-text"><strong>SOLUTIONS</strong></h3>
     </a>
-    
+    <p class="logo-desc">LOREM IPSUM</p>
+    <div class="seperator"></div>
     <h2 class="widget-title">Recent Posts</h2>
     <ul class="mini-posts">
         <?php
