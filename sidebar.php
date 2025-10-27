@@ -8,7 +8,7 @@
         </header>
     </section>
 
-    <!-- Mini Posts -->
+    <!-- Recent Mini Posts -->
     <section>
         <div class="mini-posts">
             <?php
@@ -20,23 +20,25 @@
             if ($recent_posts->have_posts()):
                 while ($recent_posts->have_posts()):
                     $recent_posts->the_post(); ?>
+
                     <article class="mini-post">
                         <header>
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <time class="published" datetime="<?php echo get_the_date('c'); ?>">
-                                <?php echo get_the_date('F j, Y'); ?>
+                            <time class="published" datetime="<?php echo esc_attr(get_the_date('c')); ?>">
+                                <?php echo esc_html(get_the_date('F j, Y')); ?>
                             </time>
-                            <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="author">
+                            <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="author">
                                 <?php echo get_avatar(get_the_author_meta('ID'), 48); ?>
                             </a>
                         </header>
 
-                        <a href="<?php the_permalink(); ?>" class="image">
-                            <?php if (has_post_thumbnail()): ?>
-                                <a href="<?php the_permalink(); ?>" class="image featured"><?php the_post_thumbnail('large'); ?></a>
-                            <?php endif; ?>
-                        </a>
+                        <?php if (has_post_thumbnail()): ?>
+                            <a href="<?php the_permalink(); ?>" class="image featured">
+                                <?php the_post_thumbnail('medium'); ?>
+                            </a>
+                        <?php endif; ?>
                     </article>
+
                 <?php endwhile;
                 wp_reset_postdata();
             else: ?>
@@ -58,22 +60,24 @@
             if ($list_posts->have_posts()):
                 while ($list_posts->have_posts()):
                     $list_posts->the_post(); ?>
+
                     <li>
                         <article>
                             <header>
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                <time class="published" datetime="<?php echo get_the_date('c'); ?>">
-                                    <?php echo get_the_date('F j, Y'); ?>
+                                <time class="published" datetime="<?php echo esc_attr(get_the_date('c')); ?>">
+                                    <?php echo esc_html(get_the_date('F j, Y')); ?>
                                 </time>
                             </header>
-                            <a href="<?php the_permalink(); ?>" class="image">
-                                <?php if (has_post_thumbnail()): ?>
-                                    <a href="<?php the_permalink(); ?>"
-                                        class="image featured"><?php the_post_thumbnail('large'); ?></a>
-                                <?php endif; ?>
-                            </a>
+
+                            <?php if (has_post_thumbnail()): ?>
+                                <a href="<?php the_permalink(); ?>" class="image featured">
+                                    <?php the_post_thumbnail('medium'); ?>
+                                </a>
+                            <?php endif; ?>
                         </article>
                     </li>
+
                 <?php endwhile;
                 wp_reset_postdata();
             endif; ?>
