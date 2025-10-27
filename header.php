@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
     <div id="wrapper">
-
+        
         <!-- Header -->
         <header id="header">
 
@@ -24,7 +24,6 @@
                 ?>
             </nav>
             <a class="search"></a>
-
 
             <nav class="main">
             </nav>
